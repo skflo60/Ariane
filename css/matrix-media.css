@@ -39,6 +39,7 @@ body {
 
 #search input[type=text] {
 	background-color: #47515b; color: #fff; 
+	width: 220px;
 }
 #search input[type=text]:focus {
 	color: #2e363f; color: #fff; box-shadow:none;
