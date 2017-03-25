@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ariane</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="css/fullcalendar.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/jquery.gritter.css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+<style type="text/css">
+  .column {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .column img {
+    display: block;
+  }
+  ul {
+    list-style-type: none;
+    margin-top: 0.25rem;
+  }
+  li {
+    margin-bottom: 0.25rem;
+  }
+  input[type=checkbox] {
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1>
+    Ariane
+  </h1>
+</div>
+<!--close-Header-part--> 
+
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Bienvenue Michelle Hussart (HSE)</span><b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="#"><i class="icon-user"></i> Mon profil</a></li>
+        <li class="divider"></li>
+        <li><a href="#"><i class="icon-check"></i> Mes actions à mener</a></li>
+        <li class="divider"></li>
+        <li><a href="login.html"><i class="icon-key"></i> Deconnexion</a></li>
+      </ul>
+    </li>
+    <li class="dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-bell"></i> <span class="text">Veille règlementaire</span> <span class="label label-important">5</span> <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a class="sAdd" title="" href="#"><i class="icon-plus"></i> Nouveaux messages</a></li>
+        <li class="divider"></li>
+        <li><a class="sInbox" title="" href="#"><i class="icon-envelope"></i> Reception</a></li>
+        <li class="divider"></li>
+        <li><a class="sOutbox" title="" href="#"><i class="icon-arrow-up"></i> Envoyés</a></li>
+        <li class="divider"></li>
+        <li><a class="sTrash" title="" href="#"><i class="icon-trash"></i> Corbeille</a></li>
+      </ul>
+    </li>
+    <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Paramètres</span></a></li>
+    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Déconnexion</span></a></li>
+  </ul>
+</div>
+<!--close-top-Header-menu-->
+<!--start-top-serch-->
+<div id="search">
+  <input type="text" placeholder="Rechercher un opérateur..."/>
+  <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+</div>
+<!--close-top-serch-->
+<!--sidebar-menu-->
+<div id="sidebar">
+  <ul>
+    <li><a href="index.html"><i class="icon icon-user"></i> <span>Suivi des opérateurs <span class="label label-important">3</span></span></a> </li>
+    <li class="active"> <a href="risques.html"><i class="icon icon-user"></i> <span>Mes risques</span></a> </li>
+    <li> <a href="formations.html"><i class="icon icon-user"></i> <span>Mes formations</span></a> </li>
+  </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content">
+<!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb">
+      <a href="index.html" title="Accueil" class="tip-bottom"> Ariane</a>
+      <a href="#"> Mes risques</a>
+      <a href="#"> Risque incendie</a>
+    </div>
+  </div>
+<!--End-breadcrumbs-->
+
+<!--Chart-box-->    
+    <div class="row-fluid">
+      <div class="widget-box">
+        <div class="widget-title bg_lg"><span class="icon icon-user"></span>
+          <h5>Risque incendie</h5>
+        </div>
+        <div class="widget-content" >
+          <div class="row-fluid">
+            <div class="span9">
+              <form>
+                <ul>
+                  <li><input type="checkbox" checked="checked"> En cas d’alarme incendie quitter les lieux dans le calme en laissant tous les effets personnels sur place</li>
+                  <li><input type="checkbox" checked="checked"> Se réunir au point de rassemblement</li>
+                  <li><input type="checkbox" checked="checked"> Ne pas encombrer les issues de secours</li>
+                  <li><input type="checkbox" checked="checked"> Ne pas déplacer les extincteurs</li>
+                  <li><input type="checkbox"> Ne rien placer devant les RIA et les placards à RIA</li>
+                  <li><input type="checkbox"> Ne pas empêcher la fermeture d’une porte coupe-feu (calle, objet encombrant, extincteur...)</li>
+                  <li><input type="checkbox"> Pendant les évacuations laisser vous diriger par les guides et serre-fils</li>
+                  <li><input type="checkbox" checked="checked"> Suivre les panneaux d’évacuation</li>
+                  <li><input type="checkbox"> Ne pas stocker de produits inflammables à proximité de sources d’inflammation</li>
+                  <li><input type="checkbox" checked="checked"> En cas de départ de feu&nbsp;:
+                    <ul>
+                      <li><input type="checkbox" checked="checked"> alerter en appuyant sur le boitier manuel</li>
+                      <li><input type="checkbox"> téléphoner au PC sécurité</li>
+                      <li><input type="checkbox" checked="checked"> composer le 18</li>
+                      <li><input type="checkbox" checked="checked"> lutter contre le feu avec un extincteur adapté</li>
+                      <li><input type="checkbox" checked="checked"> couper le courant et les fluides (gaz, liquide susceptible de s’enflammer...)</li>
+                      <li><input type="checkbox" checked="checked"> fermer la porte de la pièce dans laquelle se situe le feu</li>
+                      <li><input type="checkbox"> ouvrir les trappes de désenfumage</li>
+                    </ul>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--End-Chart-box--> 
+
+<!--end-main-container-part-->
+
+<!--Footer-part-->
+
+<div class="row-fluid">
+  <div id="footer" class="span12"></div>
+</div>
+
+<!--end-Footer-part-->
+
+<script src="js/excanvas.min.js"></script> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.ui.custom.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.flot.min.js"></script> 
+<script src="js/jquery.flot.resize.min.js"></script> 
+<script src="js/jquery.peity.min.js"></script> 
+<script src="js/fullcalendar.min.js"></script> 
+<script src="js/matrix.js"></script> 
+<script src="js/matrix.dashboard.js"></script> 
+<script src="js/jquery.gritter.min.js"></script> 
+<script src="js/matrix.interface.js"></script> 
+<script src="js/matrix.chat.js"></script> 
+<script src="js/jquery.validate.js"></script> 
+<script src="js/matrix.form_validation.js"></script> 
+<script src="js/jquery.wizard.js"></script> 
+<script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/matrix.popover.js"></script> 
+<script src="js/jquery.dataTables.min.js"></script> 
+<script src="js/matrix.tables.js"></script> 
+
+<script type="text/javascript">
+  // This function is called from the pop-up menus to transfer to
+  // a different page. Ignore if the value returned is a null string:
+  function goPage (newURL) {
+
+      // if url is empty, skip the menu dividers and reset the menu selection to default
+      if (newURL != "") {
+      
+          // if url is "-", it is this page -- reset the menu:
+          if (newURL == "-" ) {
+              resetMenu();            
+          } 
+          // else, send page to designated URL            
+          else {  
+            document.location.href = newURL;
+          }
+      }
+  }
+
+// resets the menu selection upon entry to this page:
+function resetMenu() {
+   document.gomenu.selector.selectedIndex = 2;
+}
+</script>
+</body>
+</html>
