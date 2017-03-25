@@ -1581,3 +1581,9 @@ div.dataTables_wrapper .ui-widget-header {
 }
 #sidebar .content{ display:none;}
 }
+.alert-error {
+	background-color: #f2dede !important;
+}
+.alert .alert-success {
+	background-color: #dff0d8 !important;
+}
