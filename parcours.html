@@ -35,10 +35,38 @@
     border-radius: 0.25rem;
   }
   .choice p {
-    font-size: 70%;
+    font-size: 65%;
+    font-weight: bold;
     line-height: 1.5;
     text-align: center;
     margin: 0.25rem;
+    color: ;
+  }
+  .media {
+    position: relative;
+  }
+  .media img {
+    width: 100%;
+    max-width: 320px;
+    border-bottom: thin solid #DDD;
+  }
+  .media .button {
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .media .video.button {
+    background-image: url(img/personnalisation/video.png);
+    background-size: 20%;
+  }
+  .media .vr.button {
+    background-image: url(img/personnalisation/hmd.png);
+    background-size: 30%;
+    /*opacity: 0.5;*/
   }
 </style>
 </head>
@@ -119,43 +147,61 @@
               <div class="step">
                 <h6>Étape 1</h6>
                 <div class="choice selected">
-                  <img src="http://lorempixel.com/g/320/200/business/1">
-                  <p>Vous êtes témoin d'un début d'incendie</p>
+                  <div class="media">
+                    <img src="img/personnalisation/lorempixel-1.jpg">
+                    <div class="video button"></div>
+                  </div>
+                  <p>Vous êtes témoin d'un départ de feu</p>
                 </div>
               </div>
               <div class="step">
                 <h6>Étape 2</h6>
-                <div class="choice">
-                  <img src="http://lorempixel.com/g/320/200/business/2">
-                  <p>Donner l'alerte</p>
-                </div>
                 <div class="choice selected">
-                  <img src="http://lorempixel.com/g/320/200/business/3">
-                  <p>Rester calme</p>
-                </div>
-                <div class="choice">
-                  <img src="http://lorempixel.com/g/320/200/business/4">
-                  <p>Appeler Batman</p>
+                  <div class="media">
+                    <img src="img/personnalisation/lorempixel-2.jpg">
+                    <div class="video button"></div>
+                  </div>
+                  <p>Donner l'alerte</p>
                 </div>
               </div>
               <div class="step">
                 <h6>Étape 3</h6>
                 <div class="choice selected">
-                  <img src="http://lorempixel.com/g/320/200/business/5">
-                  <p>Si vous êtes formé et/ou capable</p>
+                  <div class="media">
+                    <img src="img/personnalisation/lorempixel-3.jpg">
+                    <div class="video button"></div>
+                  </div>
+                  <p>Rester calme</p>
+                </div>
+                <div class="choice">
+                  <div class="media">
+                    <img src="img/personnalisation/batman.jpg">
+                  </div>
+                  <p>Appeler Batman</p>
                 </div>
               </div>
               <div class="step">
                 <h6>Étape 4</h6>
+                <div class="choice">
+                  <div class="media">
+                    <img src="img/personnalisation/red-fire-extinguisher.jpg">
+                  </div>
+                  <p>Utiliser un extincteur</p>
+                </div>
                 <div class="choice selected">
-                  <img src="http://lorempixel.com/g/320/200/business/6">
+                  <div class="media">
+                    <img src="img/personnalisation/augmented-reality-2.jpg">
+                    <div class="vr button"></div>
+                  </div>
                   <p>Utiliser un extincteur</p>
                 </div>
               </div>
               <div class="step">
                 <h6>Étape 5</h6>
                 <div class="choice selected">
-                  <img src="http://lorempixel.com/g/320/200/business/7">
+                  <div class="media">
+                    <img src="img/personnalisation/evacuation.png">
+                  </div>
                   <p>Évacuation</p>
                 </div>
               </div>
@@ -226,7 +272,7 @@ function resetMenu() {
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function () {
     $('.choice').click(function (evt) {
-      var choice = $(evt.target).parent();
+      var choice = $(evt.target).parent().parent();
       var choices = choice.parent();
       $('.choice', choices).removeClass('selected');
       choice.addClass('selected');
