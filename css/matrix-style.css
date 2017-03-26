@@ -1584,6 +1584,6 @@ div.dataTables_wrapper .ui-widget-header {
 .alert-error {
 	background-color: #f2dede !important;
 }
-.alert .alert-success {
+.table-striped tbody>tr.alert-success:nth-child(odd)>td{
 	background-color: #dff0d8 !important;
 }
